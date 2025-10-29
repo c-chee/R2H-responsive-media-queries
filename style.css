@@ -1,16 +1,23 @@
 body{
-    background-color: rgb(77, 76, 76)
+    background-color: lavender;
 }
 div{
     width: 100%;
     background-color: red;
     height: 100px;
 }
-ul{
+/* ul{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+} */
+
+ul {
+    display: grid;
+    grid-template-areas: "a a a a";
+    justify-items: center;
 }
+
 ul li{
     list-style: none;
 }
@@ -32,9 +39,12 @@ ul li{
     font-size: 16px
 }
 
-@media screen and (max-width:1500px){
+@media screen and (max-width:500px){
     div{
         background-color: blue;
+    }
+    ul{
+        grid-template-areas: "a" "a" "a" "a";
     }
     #red{
         color: red;
@@ -52,6 +62,40 @@ ul li{
         color: yellow;
         font-size: 16px;
     }
+
+@media screen and (max-width:300px){
+    div{
+        background-color: green;
+    }
+    ul{
+        grid-template-areas: "a" "a" "a" "a";
+    }
+    #blue{
+        font-size: 16px;
+    }
+    #green{
+        font-size: 60px;
+    }
+
+}
+@media screen and (max-width:100px){
+    div{
+        background-color: yellow;
+    }
+    ul{
+        grid-template-areas: "a" "a" "a" "a";
+    }
+    #green{
+        font-size: 16px;
+    }
+    #yellow{
+        font-size: 60px;
+    }
+
+}
+
+
+
 }
 
 
